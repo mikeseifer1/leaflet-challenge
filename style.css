@@ -14,15 +14,23 @@ html {
   line-height: 18px;
   color: #555;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 25px;
 }
 
 .legend i {
-  float: right;
-  width: 100px;
-  height: 17px;
-  margin-right: 8px;
+  float: left;
+  width: 15px; 
+  height: 15px;
+  /*radius : 6;*/
+  margin-right: 20px;
+  margin-left: 40px;
   opacity: 1;
+}
+
+#circle {
+  /* width: 15px; 
+  height: 15px; */
+  border-radius: 50%; 
 }
 
 .leaflet-bottom.leaflet-left {

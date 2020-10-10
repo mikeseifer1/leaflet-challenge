@@ -125,7 +125,7 @@ d3.json(queryUrl, function(data) {
         for (var i = 0; i < colors.length; i++) {
             div.innerHTML += 
             labels.push(
-            '<i style = "background:'+ colors[i] + '">   </i> ' +
+            '<i id = "circle" style = "background:'+ colors[i] + '"></i> ' +
             //grades[i] + (grades [i + 1] ? " - " + grades[i+1] + '<br>': '+ '));
             (grades[i] ? grades[i] : '+'));
         }
