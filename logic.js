@@ -23,10 +23,10 @@ var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_mo
 
 // Perform a GET request to the query URL
 d3.json(queryUrl, function(data) {
-  // Once we get a response, send the data.features object to the createFeatures function
+  // Once we get a response, send the data.features object to the createFeatures function.
   //createFeatures(data.features);
 
-  // Create three function. One to calculate radiues, the other color and the other magnitude
+  // Create three function. One to calculate radius, one for the other color and third for the magnitude.
 
   function mapStyle(feature) {
       return{
@@ -95,20 +95,18 @@ d3.json(queryUrl, function(data) {
     legend.onAdd = function() {
         var div = L.DomUtil.create("div", "info legend");
         labels = ['<strong>Earthquake Magnitude</strong>'],
-        //grades = [0,1,2,3,4,5],
         grades = ['0-1', '1-2', '2-3', '3-4', '4-5', '5+'];
         colors = ["white","#FFFC33","#6495ed","#90ee90","#ff8c00","#ff0000"];
-        //borderColor = "black";
+        
 
         for (var i = 0; i < colors.length; i++) {
             div.innerHTML += 
             labels.push(
             '<i id = "circle" style = "background:'+ colors[i] + '"></i> ' +
-            //grades[i] + (grades [i + 1] ? " - " + grades[i+1] + '<br>': '+ '));
             (grades[i] ? grades[i] : '+'));
         }
          div.innerHTML = labels.join('<br>');
-         //div.innerHTML += "<ul>" + labels.join("") + "</ul>";
+        
         return div;
 
 
